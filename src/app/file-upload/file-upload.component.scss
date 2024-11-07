@@ -1,0 +1,99 @@
+/* Container to center the file upload box */
+.file-upload-container {
+    display: flex;
+    border: 2px dashed #4169E1; /* Blue dashed border */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Title */
+  .title {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  /* Style the box for dragging or selecting files */
+  .file-drop-box {
+    width: 100%;
+    padding: 2rem;
+    border: 2px dashed #007bff; /* Blue border */
+    border-radius: 8px;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #007bff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, border 0.3s;
+  
+    /* Change color when hovering */
+    &:hover {
+      background-color: #e0f7ff;
+      border-color: #0056b3;
+    }
+  }
+  
+  /* File input is hidden but still accessible */
+  .file-drop-box input[type="file"] {
+    display: none;
+  }
+  
+  /* File name display */
+  .file-name {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  /* Button styles */
+  button {
+    background-color: #007bff;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  
+    /* Button hover effect */
+    &:hover {
+      background-color: #0056b3;
+    }
+  
+    /* Disable button if no file is selected */
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+  
+  /* Optional - for a smoother drag-and-drop experience */
+  .file-drop-box p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  /* Adjust for smaller screens */
+  @media screen and (max-width: 600px) {
+    .file-upload-container {
+      padding: 1rem;
+    }
+  
+    .title {
+      font-size: 1.25rem;
+    }
+  
+    .file-drop-box {
+      padding: 1.5rem;
+    }
+  }
+  
