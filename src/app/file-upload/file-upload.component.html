@@ -1,23 +1,44 @@
-<div class="file-upload-container">
-    <h2 class="title">Choose a file to upload</h2>
-  
-    <!-- Drop or select file input -->
-    <div
-      class="file-drop-box"
-      (drop)="onFileDropped($event)"
-      (dragover)="onDragOver($event)"
-      (click)="triggerFileInput()"
-    >
-      <p>Drag and drop your file here, or click to select</p>
-      <input type="file" (change)="onFileSelected($event)" #fileInput />
-    </div>
-  
-    <!-- File name display -->
-    <p *ngIf="selectedFile" class="file-name">
-      Selected File: {{ selectedFile?.name }}
-    </p>
-  
-    <!-- Upload button (only show if a file is selected) -->
-    <button *ngIf="selectedFile" (click)="uploadFile()">Upload</button>
+<!-- Navigation Menu with Logo -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo Image -->
+    <a href="#ressourcen" class="logo">
+      <img src="assets/images/hamilton-medical-logo.jpg" alt="Company Logo">
+    </a>
+    <!-- Navigation Menu -->
+    <ul class="nav-menu">
+      <li><a href="#produkte">Produkte</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#academy">Academy</a></li>
+      <li><a href="#ressourcen">Ressourcen</a></li>
+      <li><a href="#e-catalog">E‑catalog</a></li>
+      <li><a href="#ueber-uns">Über uns</a></li>
+      <li><a href="#jobs">Jobs</a></li>
+      <li><a href="#news">News</a></li>
+    </ul>
   </div>
-  
+</nav>
+
+<!-- Your Existing File Upload Component -->
+<div class="file-upload-container">
+  <h2 class="title">Upload a ventilator</h2>
+
+  <!-- Drop or select file input -->
+  <div
+    class="file-drop-box"
+    (drop)="onFileDropped($event)"
+    (dragover)="onDragOver($event)"
+    (click)="triggerFileInput()"
+  >
+    <p>Drag and drop your file here, or click to select</p>
+    <input type="file" (change)="onFileSelected($event)" #fileInput />
+  </div>
+
+  <!-- File name display -->
+  <p *ngIf="selectedFile" class="file-name">
+    Selected File: {{ selectedFile.name }}
+  </p>
+
+  <!-- Upload button (only show if a file is selected) -->
+  <button *ngIf="selectedFile" (click)="uploadFile()">Upload</button>
+</div>

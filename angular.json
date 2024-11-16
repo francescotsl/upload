@@ -28,7 +28,12 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",   // Ensure assets folder is correctly configured
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "public"         // Retain public folder (if you use it)
               }
             ],
             "styles": [
@@ -87,7 +92,12 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
+                "input": "src/assets",   // Add assets folder for tests as well
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "public"         // Retain public folder for tests
               }
             ],
             "styles": [
